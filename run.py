@@ -6,31 +6,38 @@ board = []
 for i in range(0, 5):
     board.append(["-"] * 5)
 
-def p_board_game(board):
-    """ 
-    Creating game boar
-    """
-    for row in board:
-        print((" ").join(row))
+
+def p_board__game(board):
+
+    """ Creating game boar """
+
+
+for row in board:
+    print((" ").join(row))
 
 print("Let's Play!")
 
 p_board_game(board)
 
-def run_row(board):
-    """
-    random row for ship
-    """
+
+def run__row(board):
+
+    """ random row for ship"""
     return random.randint(0, len(board) - 1)
 
-def run_col(board):
-    """ 
-    rundom column for a ship
-    """
+
+def run__col(board):
+
+    """ rundom column for a ship"""
     return random.randint(0, len(board[0]) - 1)
 
-ship_row = run_row(board)
-ship_col = run_col(board)
+
+ship__row = run_row(board)
+
+
+ship__col = run_col(board)
+
+
 print(ship_row)
 print(ship_col)
 
@@ -43,7 +50,7 @@ for turn in range(10):
         break
     else:
         if turn == 10:
-            board[guess_row][gues_col] ="X"
+            board[guess_row][gues_col] = "X"
             p_board_game(board)
             print('Game Over')
         else:
