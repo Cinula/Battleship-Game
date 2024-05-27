@@ -29,3 +29,8 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 
 -----
 Happy coding!
+
+sorces
+https://gist.github.com/guimaion/9275543
+
+http://pythonfiddle.com/battleships-game-in-python/
