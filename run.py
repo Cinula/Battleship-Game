@@ -1,6 +1,22 @@
 import random
 
-print("Welcome in Battleship Game!")
+print("Welcome in Battleship Game!\nGood Luck!\n")
+
+class BattleshipField:
+    def __init__(self, boar):
+        self.board = board
+
+    def get_numbers_paired_to_letters():
+        numbers_paired_to_letters = {"A": 0, "B": 1, "C": 2, "D": 3, "E": 4, "F": 5, "G": 6, "H": 7}
+        return numbers_paired_to_letters
+    
+    def print_board(self):
+        print("  A B C D E F G H")
+        row_n = 1
+        for row in self.board:
+            print("%d|%s|" % (row_n, "|".join(row)))
+            row_n += 1 
+
 
 board = []
 for i in range(0, 5):
