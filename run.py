@@ -3,6 +3,9 @@ import random
 print("Welcome in Battleship Game!\nGood Luck!\n")
 
 class BattleshipField:
+
+    """ Creating class game board for battleship game """
+
     def __init__(self, boar):
         self.board = board
 
@@ -18,44 +21,21 @@ class BattleshipField:
             row_n += 1 
 
 
-board = []
-for i in range(0, 5):
-    board.append(["-"] * 5)
+class Battleship:
+
+    def __init__(self, board):
+        self.board = board
+    
+    def creating_ships(self):
+        for i in range(5):
+            self.r_row, self.c_column = random.randint(0, 7), random.randint(0, 7)
+            while self.board[self.r_row][self.c_column] == "X":
+                self.r_row, self.c_column = random.randint(0, 7), random.randint(0, 7)
+            self.board[self.r_row][self.c_column] = "X"
+        return self.board
 
 
-def p_board__game(board):
 
-    """ Creating game boar """
-
-
-for row in board:
-    print((" ").join(row))
-
-print("Let's Play!")
-
-p_board_game(board)
-
-
-def run__row(board):
-
-    """ random row for ship"""
-    return random.randint(0, len(board) - 1)
-
-
-def run__col(board):
-
-    """ rundom column for a ship"""
-    return random.randint(0, len(board[0]) - 1)
-
-
-ship__row = run_row(board)
-
-
-ship__col = run_col(board)
-
-
-print(ship_row)
-print(ship_col)
 
 for turn in range(10):
     guess_row = int(input("Pick number from 0-4 for row: "))
