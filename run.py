@@ -1,5 +1,4 @@
-import random
-
+import random   
 
 # Constants
 
@@ -32,7 +31,6 @@ def place_ships(board, num_ships):
         if (row, col) not in ships:
             ships.append((row, col))
     return ships
-    print(ships)
 
 def get_player_guess():
     
@@ -45,7 +43,7 @@ def get_player_guess():
     except ValueError:
         print(f"{player_name} Please enter valid integers.")
         return get_player_guess()
-
+    
 def check_guess(guess, ships):
 
     """ Game checks if was hit or miss"""
@@ -62,7 +60,7 @@ def update_board(board, guess, result):
 
     row, col = guess
     if result == "Hit!":
-        board[row][col] = "X"
+        board[row][col] = "x"
     else:
         board[row][col] = "O"
 
@@ -77,6 +75,7 @@ def main():
     print(f"3.Game board shows 'O' for miss and 'X' for hit.\n4.Under game board you can see\nGame counter\nHow meny turens you made\nBest of Luck! {player_name}" )
     print("x" * 25)
     print_board(board)
+    # print(ships)
     turns = 0
     while turns < SHOTS and ships:
         guess = get_player_guess()
