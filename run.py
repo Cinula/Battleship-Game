@@ -17,9 +17,19 @@ def print_board(board):
     for row in board:
         print(' '.join(row))
 
-def place_ships(board, num_sips):
+def place_ships(board, num_ships):
 
-    """ Placing ships randomly on game board """
+    """ Placeing ships randomly on game board """
 
     ships = []
-    while len(ships) < num_ships
+    while len(ships) < num_ships:
+        row = random.randint(0, GAME_BOARD_SIZE - 1)
+        col = random.randint(0, GAME_BOARD_SIZE - 1)
+        if (row, col) not in ships:
+            ships.append((row,col))
+    return(ships)
+
+def get_player_guess():
+    
+    """ Function for player to shoot """
+
