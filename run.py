@@ -33,3 +33,32 @@ def get_player_guess():
     
     """ Function for player to shoot """
 
+    try:
+        row = int(input("Gues Row (0-4): "))
+        col = int(input("Gues column (0-4): "))
+        return row, col
+    except ValueError:
+        print("Please enter valid number.")
+        return get_player_guess() 
+
+def check_guess(guess, ships):
+
+    """ Checking if player hit battleship or miss """ 
+
+    if guess in ships:
+        ships.remove(guess)
+        return "HIT!"
+    else:
+        return "Miss!"
+
+def update_board():
+
+    """ Function for update the gameboard """
+
+def main():
+
+    """Main game engine fuction for battlship game to run"""
+
+
+
+
