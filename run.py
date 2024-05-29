@@ -11,6 +11,9 @@ SHOTS = 10
 
 board = [['-'] * BOARD_SIZE for _ in range(BOARD_SIZE)]
 
+print("Welcome to Battleship!")
+player_name = input("What is your name ?: ")
+
 def print_board(board):
 
     """creating game board"""
@@ -29,17 +32,18 @@ def place_ships(board, num_ships):
         if (row, col) not in ships:
             ships.append((row, col))
     return ships
+    print(ships)
 
 def get_player_guess():
     
     """ Function for player to choose where to shoot"""
     
     try:
-        row = int(input("Guess Row (0-4): "))
-        col = int(input("Guess Column (0-4): "))
+        row = int(input(f"{player_name} Guess Row (0-4): "))
+        col = int(input(f"{player_name} Guess Column (0-4): "))
         return row, col
     except ValueError:
-        print("Please enter valid integers.")
+        print(f"{player_name} Please enter valid integers.")
         return get_player_guess()
 
 def check_guess(guess, ships):
@@ -67,11 +71,10 @@ def main():
     """ This is main game engine """
 
     ships = place_ships(board, SHIPS_COUNTER)
-    print("Welcome to Battleship!")
     print("x" * 25)
     print("1.You have 10 Turns (shots)\nto destroy all\nenemies battleships!")
     print("2.Below the game board you\nsee guess row option\npick the row number from 0 to 4\nautomaticly shows you another option\nto choose column\nPlease pick columnt number\nfrom 0 - 4 ")
-    print("3.Game board shows 'O' for miss and 'X' for hit.\n4.Under game board you can see\nGame counter\nHow meny turens you made\nBest of Luck!" )
+    print(f"3.Game board shows 'O' for miss and 'X' for hit.\n4.Under game board you can see\nGame counter\nHow meny turens you made\nBest of Luck! {player_name}" )
     print("x" * 25)
     print_board(board)
     turns = 0
@@ -82,14 +85,14 @@ def main():
             update_board(board, guess, result)
             print(result)
         else:
-            print("Out of bounds. Try again.")
+            print(f"{player_name} Out of bounds. Try again.")
         print_board(board)
         turns += 1
-        print(f"Your heve: {SHOTS} turns\nYour turns counter: {turns}" )
+        print(f"{player_name} Your heve: {SHOTS} turns\nYour turns counter: {turns}" )
     if not ships:
-        print("Congratulations! You sunk all the ships!")
+        print(f"{player_name} Congratulations! You sunk all the ships!")
     else:
-        print("Game Over. You ran out of turns.")
+        print(f"{player_name} Game Over . You ran out of turns.")
         print("Ships were at:", ships)
 if __name__ == "__main__":
     main()
