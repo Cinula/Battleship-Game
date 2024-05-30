@@ -17,7 +17,8 @@ player_name = input("What is your name Capitan ?: ")
 
 
 def print_board(board):
-    """creating game board"""
+    """Main game board, ther will be computer will place ramdomly ships on it.
+     player will need to guess where they are."""
 
     for row in board:
         print(' '.join(row))
@@ -25,7 +26,7 @@ def print_board(board):
 
 def place_ships(board, num_ships):
 
-    """ Placeing ships on the board """
+    """ Placeing ships on the board, and randomly display by computer """
 
     ships = []
     while len(ships) < num_ships:
@@ -37,7 +38,8 @@ def place_ships(board, num_ships):
 
 
 def get_player_guess():
-    """ Function for player to choose where to shoot"""
+    """ Function for player to choose where to shoot.
+     Player will have to chose with and typ number from (0-4) for row and column"""
 
     try:
         row = int(input(f"Capitan {player_name} Fire Row (0-4): "))
@@ -50,7 +52,8 @@ def get_player_guess():
 
 def check_guess(guess, ships):
 
-    """ Game checks if was hit or miss"""
+    """ Game checks if was hit or miss automaticly, if it hit or loese 
+    print out massage depends on hit or lose."""
 
     if guess in ships:
         ships.remove(guess)
@@ -61,7 +64,8 @@ def check_guess(guess, ships):
 
 def update_board(board, guess, result):
 
-    """ Updeting game board with miss or hit"""
+    """ Updeting game board with miss or hit. On play board will be marked O for miss or X for hit
+    Player can see where was hidden ship if he hit."""
 
     row, col = guess
     if result == "Hit!":
@@ -72,7 +76,7 @@ def update_board(board, guess, result):
 
 def main():
 
-    """ This is main game engine """
+    """ This is main game engine with small story line, it shows all the game function with instruction how to play."""
 
     ships = place_ships(board, SHIPS_COUNTER)
 
