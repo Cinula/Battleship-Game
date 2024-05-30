@@ -12,9 +12,15 @@ board = [['-'] * BOARD_SIZE for _ in range(BOARD_SIZE)]
 print(" ")
 print("Welcome to Battleship Game!")
 print("Pleas type in your name and press Enter to start!")
+print("Player name has to be only alphabetical and minimum 3 letter.")
 print(" ")
-player_name = input("What is your name Capitan ?: ")
 
+while True:
+    player_name = input("What is your name Capitan ?: ")
+    if not player_name.isalpha() or len(player_name) < 3:
+        print("Invalid name") 
+    else:
+        break
 
 def print_board(board):
     """Main game board, ther will be computer will place ramdomly ships on it.
@@ -39,7 +45,8 @@ def place_ships(board, num_ships):
 
 def get_player_guess():
     """ Function for player to choose where to shoot.
-     Player will have to chose with and typ number from (0-4) for row and column"""
+     Player will have to chose with and typ number
+     from (0-4) for row and column"""
 
     try:
         row = int(input(f"Capitan {player_name} Fire Row (0-4): "))
@@ -52,7 +59,7 @@ def get_player_guess():
 
 def check_guess(guess, ships):
 
-    """ Game checks if was hit or miss automaticly, if it hit or loese 
+    """ Game checks if was hit or miss automaticly, if it hit or loese
     print out massage depends on hit or lose."""
 
     if guess in ships:
@@ -64,7 +71,8 @@ def check_guess(guess, ships):
 
 def update_board(board, guess, result):
 
-    """ Updeting game board with miss or hit. On play board will be marked O for miss or X for hit
+    """ Updeting game board with miss or hit. On play board
+    will be marked O for miss or X for hit
     Player can see where was hidden ship if he hit."""
 
     row, col = guess
@@ -76,11 +84,14 @@ def update_board(board, guess, result):
 
 def main():
 
-    """ This is main game engine with small story line, it shows all the game function with instruction how to play."""
+    """ This is main game engine with small story line, it shows all the game
+    function with instruction how to play."""
 
     ships = place_ships(board, SHIPS_COUNTER)
-
-    print("x" * 25)
+    
+    print("X" * 25)
+    print(" ")
+    print("      Instruction !")
     print(" ")
     print("1.You have 10 Turns (shots)\nto destroy all\nenemies battleships!")
     print("2.Below the game board you see guess row option")
@@ -91,7 +102,7 @@ def main():
     print("4.Under game board you can see Game counter")
     print(f"How meny turens you made\nBest of Luck! {player_name}")
     print(" ")
-    print("x" * 25)
+    print("X" * 25)
     print(f"Capitan {player_name}, there is an Enemy ships nearby!")
     print("Preper Cannons ")
     print("aye aye Capitan")
