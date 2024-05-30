@@ -108,7 +108,8 @@ def main():
         print(f"{player_name} Your heve: {SHOTS} shots")
         print(f"Your ammunition counter: {turns}")
     if not ships:
-        print(f"Capitan {player_name} Congratulations! You sunk all enemy ships!")
+        print(f"Capitan {player_name} Congratulations!")
+        print("You sunk all enemy ships!")
     else:
         print(f"{player_name} Game Over . You ran out of ammunition.")
         print("Ships were at:", ships)
