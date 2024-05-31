@@ -18,13 +18,15 @@ print(" ")
 while True:
     player_name = input("What is your name Capitan ?: ")
     if not player_name.isalpha() or len(player_name) < 3:
-        print("Invalid name") 
+        print("Invalid name")
     else:
         break
 
+
 def print_board(board):
-    """Main game board, ther will be computer will place ramdomly ships on it.
-     player will need to guess where they are."""
+
+    """ Main game board, ther will be computer will place ramdomly ships on it.
+    player will need to guess where they are."""
 
     for row in board:
         print(' '.join(row))
@@ -88,7 +90,7 @@ def main():
     function with instruction how to play."""
 
     ships = place_ships(board, SHIPS_COUNTER)
-    
+
     print("X" * 25)
     print(" ")
     print("      Instruction !")
