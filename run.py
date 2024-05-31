@@ -12,7 +12,7 @@ board = [['-'] * BOARD_SIZE for _ in range(BOARD_SIZE)]
 print(" ")
 print("Welcome to the Battleship Game!")
 print("Please type in your name and press Enter to start!")
-print("The player's name must be only alphabetical and a minimum of 3 letters.")
+print("The player's name must be only alphabetical and a min of 3 letters.")
 print(" ")
 
 while True:
@@ -25,8 +25,9 @@ while True:
 
 def print_board(board):
 
-    """ On the main game board, there will be a computer that will place randomly ships on it.
-  The player will need to guess where they are."""
+    """ On the main game board, there will be a computer
+    that will place randomly ships on it.
+    The player will need to guess where they are."""
 
     for row in board:
         print(' '.join(row))
@@ -34,7 +35,7 @@ def print_board(board):
 
 def place_ships(board, num_ships):
 
-    """ Placing ships on the board, and randomly displaying them by computer """
+    """Placing ships on the board, and randomly displaying them by computer"""
 
     ships = []
     while len(ships) < num_ships:
@@ -88,7 +89,7 @@ def update_board(board, guess, result):
 
 def main():
 
-    """ This is the main game engine with the small storyline, it shows the game
+    """This is the main game engine with the small storyline, it shows the game
     function with instructions how to play."""
 
     ships = place_ships(board, SHIPS_COUNTER)
