@@ -11,6 +11,7 @@ SHOTS = 10
 board = [['-'] * BOARD_SIZE for _ in range(BOARD_SIZE)]
 print(" ")
 print("Welcome to the Battleship Game!")
+print(" ")
 print("Please type in your name and press Enter to start!")
 print("The player's name must be only alphabetical and a min of 3 letters.")
 print(" ")
@@ -122,7 +123,7 @@ def main():
             update_board(board, guess, result)
             print(result)
         else:
-            print(f"{player_name} Too far. Try again.")
+            print(f"Capitan {player_name} that was Too far. Try again.")
         print_board(board)
         turns += 1
         print(f"{player_name} Your have: {SHOTS} shots")
