@@ -6,12 +6,12 @@ BOARD_SIZE = 5
 SHIPS_COUNTER = 3
 SHOTS = 10
 
-# Create the board
+# Create the game board
 
 board = [['-'] * BOARD_SIZE for _ in range(BOARD_SIZE)]
 print(" ")
 print("Welcome to Battleship Game!")
-print("Pleas type in your name and press Enter to start!")
+print("Please type in your name and press Enter to start!")
 print("Player name has to be only alphabetical and minimum 3 letter.")
 print(" ")
 
@@ -66,9 +66,9 @@ def check_guess(guess, ships):
 
     if guess in ships:
         ships.remove(guess)
-        return f"Hit! Capitan {player_name} We sank enemi shop hury!"
+        return "Hit!"
     else:
-        return f"Miss! Capitn {player_name}: preper canons!"
+        return "Miss!"
 
 
 def update_board(board, guess, result):
@@ -79,9 +79,11 @@ def update_board(board, guess, result):
 
     row, col = guess
     if result == "Hit!":
-        board[row][col] = "x"
+        board[row][col] = "X"
+        print(f"Capitan {player_name} we sank battleship!")
     else:
         board[row][col] = "O"
+        print(f"Capitan {player_name} we Miss!")
 
 
 def main():
@@ -110,7 +112,7 @@ def main():
     print("aye aye Capitan")
     print("Canons ready to fire!")
     print_board(board)
-    # print(ships)
+    print(ships)
     turns = 0
     while turns < SHOTS and ships:
         guess = get_player_guess()
@@ -123,7 +125,7 @@ def main():
         print_board(board)
         turns += 1
         print(f"{player_name} Your heve: {SHOTS} shots")
-        print(f"Your ammunition counter: {turns}")
+        print(f"Your shots counter: {turns}")
     if not ships:
         print(f"Capitan {player_name} Congratulations!")
         print("You sunk all enemy ships!")
