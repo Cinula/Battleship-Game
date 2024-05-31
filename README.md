@@ -31,7 +31,7 @@ The deployment terminal is set to 80 columns by 24 rows. That means that each li
 Happy coding!
 
 
-Welcome! to Battleshop game. 
+Welcome! to the Battleship game. 
 
 User story:
 
@@ -39,32 +39,32 @@ User story:
 
         Play the single-player battleship game.
         See the greetings for the player and game title.
-        see game board and for choic of player shot.
+        see the game board for the choice of player shot.
         See player shot counter.
         See the message when I win.
-        See the massage if I lose.
+        See the message if I lose.
         See the position of the ships when I lose.
-        see ships marked after shoot. 
-        see miss marked afet shoot.
+        see ships marked after the shoot. 
+        see miss marked after shoot.
 
 Features of the game The game have a 2 navigating options to choose from:
 
     Option one is to guess where he wants to shoot, and choose vertically a row from numbers 0-4.
-    Option two is to guess where he wants to shoot horizontally and choose column from numbers 0-4.
+    Option two is to guess where he wants to shoot horizontally and choose columns from numbers 0-4.
 
 
 Future features
-    The game could be linking the project with google sheet to record the results of wining.
+    The game could link the project with Google Sheets to record the results of winning.
 
 Technology:
 
     Main technology
         Tower PC with Windows 10 Pro
         Visual studio code
-        python programing language to write code
+        python programming language to write code
     Google browser
     Google inspects
-    GitHub, Git and Gitpod workspace
+    GitHub, Git, and Gitpod workspace
     Display repository
     Committing code to the Gitpod
     pep 8 code Validator link to Python code
