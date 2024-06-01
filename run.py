@@ -1,12 +1,12 @@
 import random
 
-# Constants
+# Constants for game
 
 BOARD_SIZE = 5
 SHIPS_COUNTER = 3
 SHOTS = 10
 
-# Create the game board
+# Create the game board in size of 5 dashes 
 
 board = [['-'] * BOARD_SIZE for _ in range(BOARD_SIZE)]
 print(" ")
@@ -15,6 +15,8 @@ print(" ")
 print("Please type in your name and press Enter to start!")
 print("The player's name must be only alphabetical and a min of 3 letters.")
 print(" ")
+
+# Validation for player name to be a minimum 3 letters only alphabetical 
 
 while True:
     player_name = input("What is your name Capitan ?: ")

@@ -137,3 +137,5 @@ Credits
      My mentor, "Rohit Sharma" for helping me with my third project.
      My colleague from the Slack community Tomáš Kubánčik (Helped with fixing the Code)
      Code Institute tutor team for helping me sort out some issues. 
+
+Thank you
