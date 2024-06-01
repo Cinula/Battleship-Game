@@ -1,4 +1,4 @@
-Battle Ship game!
+Battleship game!
 
 
 Welcome to Battleship game this is Single player game:
