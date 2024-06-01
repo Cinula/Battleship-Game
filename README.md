@@ -68,15 +68,14 @@ Future features
 
 Technology:
 
-    Main technology
-        Tower PC with Windows 10 Pro
-        Visual studio code
-        python programming language to write code
-        GitHub, Git, and Gitpod workspace
-        Display repository
-        Committing code to the Gitpod
-        pep 8 code Validator link to Python code
-        Grammarly for grammar and spelling mistakes.
+    Tower PC with Windows 10 Pro
+    Python programming language to write code
+    GitHub, Git, and Gitpod workspace platform to perform and deploy for display.
+[Link for Github](https://github.com/Cinula)
+
+    Pep 8 code Validator link to Python code
+[link for pep8 validator](https://pep8ci.herokuapp.com/)
+    Grammarly for grammar and spelling mistakes.
 
 Testing:
 
@@ -92,33 +91,49 @@ Testing:
     The player has messages that he runs out of ammunition and the position of the enemy ships. There is a Location for the remaining ships after the player runs out of turns.
 ![alt text](assets/images/lose.png)
 
-    There is also another function for the player, if the number of the row or column is beyond 0 to 4 then the Player looses the shot and the game shows the message is too far 
+    There is also another function for the player, if the number of the row or column is beyond 0 to 4 then the Player loses the shot and the game shows the message is too far 
 ![alt text](assets/images/toofar.png)
 
 Bugs and errors :
+
+    - Lines too long 
+    - Whitespaces in the code 
+    - Need to be two spaces between function lines
+    - Grammar mistakes
+![errors](assets/images/errors.png)
 
 
 Deployment
 
     This website was deployed to the GitHub page as my repository the steps are below.
-    In GitHub navigate to the repository Click on setting ( last section on navbar)
-    Find "Pages" on the drop-down menu
-    left-hand side of the drop-down many find Build and Deployment
-    choose to deploy from a branch below choose the main branches and root folder
-    save
-    The dev environment was VS code, in which the code was written. The steps to Deploy to Github: Open the GitHub page on my account, click Create a new repository, and type in the repository name.
-    Opened VS code dev environment, found the terminal on the top navbar, and clicked new terminal. Take instructions from GitHub and type in the terminal
-    echo "# new" >> README.md git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/Cinula/new.git git push -u origin main
+        I used the template from the Code Institute GitHub page and clicked on use this template.
+        Automatically directed me to a new repository page in my GitHub account. 
+        Type in the new repository name and click Create Repository.
+
+    The dev environment was Gitpod workspace, in which the code was written. The steps to was:
+        Sign up account with an email address created by Code Institute with your email address.
+        On the Gitpod workspace dashboard click new workspace, select the repository, place the repository link in a placeholder, and click chosen repository and workspace ready to work on. 
+
+    Heroku cloud application platform, steps i did:
+        Create an account on Heroku Use an email address, password, and personal details information and click Create an account. 
+        Click Create New Application, choose a unique name for the app, choose a region, and create an app.
+        Go to settings and choose build pack python and nodejs in the correct order 1. python 2. nodejs click save.
+        Choose deployment methods, from the 3 options select Github, type in the repository name, and click search. 
+        chose your repository from Github by name and click connect to link your Heroku account with the GitHub repository
+        At the bottom of the page are automatic and manual deploy, I use the manual deploy.
+        To test the app click open app from the top right corner.
 
 Credits
     
     Content
 
-    The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
-    Code institute and love Math projects helped me a lot in understanding a lot of content. I gathered the information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: link for Youtube YouTube link for link for Youtube
-    Media
+    The information for the game was taken from Code Institute from idea example 2.
+    I gathered the information for a better understanding of the game engine and how to create Python code on YouTube the links are below:
+[Youtube_link](https://www.youtube.com/watch?v=tF1WRCrd_HQ&t=124s)
 
-    The images were gathered from an open-source site.
-    Acknowledgment
 
-    Special thanks to my mentor, "Rohit Sharma" for helping me with my second project.
+ Special thanks to:
+
+     My mentor, "Rohit Sharma" for helping me with my third project.
+     My colleague from the Slack community Tomáš Kubánčik (Helped with fixing the Code)
+     Code Institute tutor team for helping me sort out some issues. 
