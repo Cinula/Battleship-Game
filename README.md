@@ -90,6 +90,35 @@ Testing:
 
     Testing loes:
     The player has messages that he runs out of ammunition and the position of the enemy ships. There is a Location for the remaining ships after the player runs out of turns.
-![lose](lose.png)
+![alt text](assets/images/lose.png)
 
- There is as well anothen function for player, if the number of the row or column is beyond 0 to 4 then Player looses the shot and the game showing massage is was too far 
+    There is also another function for the player, if the number of the row or column is beyond 0 to 4 then the Player looses the shot and the game shows the message is too far 
+![alt text](assets/images/toofar.png)
+
+Bugs and errors :
+
+
+Deployment
+
+    This website was deployed to the GitHub page as my repository the steps are below.
+    In GitHub navigate to the repository Click on setting ( last section on navbar)
+    Find "Pages" on the drop-down menu
+    left-hand side of the drop-down many find Build and Deployment
+    choose to deploy from a branch below choose the main branches and root folder
+    save
+    The dev environment was VS code, in which the code was written. The steps to Deploy to Github: Open the GitHub page on my account, click Create a new repository, and type in the repository name.
+    Opened VS code dev environment, found the terminal on the top navbar, and clicked new terminal. Take instructions from GitHub and type in the terminal
+    echo "# new" >> README.md git init git add README.md git commit -m "first commit" git branch -M main git remote add origin https://github.com/Cinula/new.git git push -u origin main
+
+Credits
+    
+    Content
+
+    The information for the game Rock, paper, scissors, lizard, Spock game was taken from Code Institute from idea example 1.
+    Code institute and love Math projects helped me a lot in understanding a lot of content. I gathered the information for a better understanding of the game engine and how to create JavaScript on YouTube the links are below: link for Youtube YouTube link for link for Youtube
+    Media
+
+    The images were gathered from an open-source site.
+    Acknowledgment
+
+    Special thanks to my mentor, "Rohit Sharma" for helping me with my second project.
